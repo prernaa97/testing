@@ -1,0 +1,125 @@
+_satellite.pushBlockingScript(function(event, target, $variables){
+  if(window.location.hostname.indexOf('nykaaman.com') > -1){
+    function setCookie(name,value,expires) {
+  document.cookie = name + "=" + value + "; " + expires;
+}
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length,c.length);
+    }
+  }
+  return "";
+}
+
+var mycookie = getCookie('__utmz').split('|');
+var flag = 0;
+for(var i=0;i<mycookie.length;i++) {
+  if(mycookie[i] == 'utmcsr=Affiliate') {
+    flag = 1;break;
+  }
+}
+if ((mycookie.includes('utmcsr=Display')) && (mycookie.includes('utmcmd=Admitad'))) {
+  flag = 1;
+}
+if(flag)
+{
+  var checkcookie = getCookie('checkcake');
+  if(checkcookie == "")
+  {
+    /* // Converted jQuery to Standard Javascript.
+    
+    jQuery("<iframe />").attr("src","").attr("scrolling","no").attr("frameborder","0").attr("id","brandingoffersallpages").attr("width","1").attr("height","1").appendTo("body");
+		var framesrc= (document.location.protocol==="https:"?"https:":"http:")+"//naff.co.in/p.ashx?a=4&e=7&t=";
+    document.getElementById('brandingoffersallpages').src = framesrc;
+    */
+    
+    var iFrame = document.createElement("iframe");
+    iFrame.setAttribute("src","")
+    iFrame.setAttribute("scrolling","no")
+    iFrame.setAttribute("frameborder","0")
+    iFrame.setAttribute("id","brandingoffersallpages")
+    iFrame.setAttribute("width","1")
+    iFrame.setAttribute("height","1")
+    document.body.appendChild(iFrame);
+    
+    var framesrc= window.location.protocol+"//naff.co.in/p.ashx?a=4&e=7&t=";
+    iFrame.src = framesrc;
+    
+    
+    setCookie('checkcake',1,0);
+  }
+  
+}
+
+
+	 
+}else{
+    function setCookie(name,value,expires) {
+  document.cookie = name + "=" + value + "; " + expires;
+}
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length,c.length);
+    }
+  }
+  return "";
+}
+
+var mycookie = getCookie('__utmz').split('|');
+var flag = 0;
+for(var i=0;i<mycookie.length;i++) {
+  if(mycookie[i] == 'utmcsr=Affiliate') {
+    flag = 1;break;
+  }
+}
+if ((mycookie.includes('utmcsr=Display')) && (mycookie.includes('utmcmd=Admitad'))) {
+  flag = 1;
+}
+if(flag)
+{
+  var checkcookie = getCookie('checkcake');
+  if(checkcookie == "")
+  {
+    /* // Converted jQuery to Standard Javascript.
+    
+    jQuery("<iframe />").attr("src","").attr("scrolling","no").attr("frameborder","0").attr("id","brandingoffersallpages").attr("width","1").attr("height","1").appendTo("body");
+		var framesrc= (document.location.protocol==="https:"?"https:":"http:")+"//naff.co.in/p.ashx?a=1&e=2&t=";
+    document.getElementById('brandingoffersallpages').src = framesrc;
+    */
+    
+    var iFrame = document.createElement("iframe");
+    iFrame.setAttribute("src","")
+    iFrame.setAttribute("scrolling","no")
+    iFrame.setAttribute("frameborder","0")
+    iFrame.setAttribute("id","brandingoffersallpages")
+    iFrame.setAttribute("width","1")
+    iFrame.setAttribute("height","1")
+    document.body.appendChild(iFrame);
+    
+    var framesrc= window.location.protocol+"//naff.co.in/p.ashx?a=1&e=2&t=";
+    iFrame.src = framesrc;
+    
+    
+    setCookie('checkcake',1,0);
+  }
+  
+}
+
+
+	 
+}
+});

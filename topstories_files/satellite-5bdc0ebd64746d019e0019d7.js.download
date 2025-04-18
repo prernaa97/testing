@@ -1,0 +1,100 @@
+_satellite.pushBlockingScript(function(event, target, $variables){
+  /*function validateToBeTracked () {
+    var PRODUCT_IDS = [ '13369', '81809', '8997', '807', '197286', '985', '198989', '92040', '295462', '295451', '23215', '23776', '71583', '208991', '13381', '158701', '39967', '60555', '172602', '23757', '35533', '17772', '2212', '60888', '265965', '337494', '14643', '36456'];
+    // Do it only on the React page
+    if (!window.__NODE_ENV__) {
+        return false;
+    }
+    var initialParams = window.__INITIAL_PARAMS__;
+    var productId = initialParams.productId;
+    if (!(initialParams.eq === 'desktop' && initialParams.ptype === 'product')) {
+      return false;
+    }
+    if (PRODUCT_IDS.indexOf(productId) === -1) {
+        return false;
+    }
+    return true;
+}
+
+var trackThumbnailModule = function(_satellite) {
+    (function addEventListner() {
+        try {
+            if (!validateToBeTracked()) {
+                return;
+            }
+
+            var slickPaginationInstances = document.querySelectorAll('.slick-pagination');
+            for (var i=0; i<slickPaginationInstances.length; i++) {
+                slickPaginationInstances[i].addEventListener('mouseenter', thumbnailHandler)
+            }
+        } catch (e) {
+          console.log('PAGE LOAD RULE:: All Page On Load :: Sequential Javascript :: TRACK_PDP_THUMBNAILS_HOVER :: ', e);
+        }
+    })();
+
+    var isItImage = function(target){
+        if(target.querySelector('img')) {   // if its an image
+            return true;
+        }
+        return false;
+    };
+    
+    var isItVideo = function(target){
+        var videoThumb = target.classList.contains('slick-video-thumb');
+        if (videoThumb) {
+            return true;
+        }
+        return false;
+    };
+    
+    var doTrack = function(data) {
+        window.datalayer = window.datalayer || {};
+        window.datalayer['pdpThumbnailIndexAndType'] = data.indexAndType;
+        _satellite.track('track-pdp-thumbnails-hover');
+        // console.log(data);
+    }
+    
+    function thumbnailHandler (evt) {
+        setTimeout(function(){
+            evt.stopPropagation();
+            if(!evt.target){
+                return;
+            }
+            try {
+                var target = evt.target;
+                while (true) {
+                    var slickPagination = target.classList.contains('slick-pagination');
+                    if (slickPagination) {
+                        break;
+                    }
+                    target = target.parentNode;
+                }
+                
+                var dataIndex = parseInt(target.getAttribute('data-index')) + 1;
+                var isImage = isItImage(target);
+                var isVideo = isItVideo(target);
+                
+                if (isImage) {
+                    doTrack({
+                        indexAndType: (dataIndex + '_image')
+                    });
+                } else if(isVideo) {
+                    doTrack({
+                        indexAndType: (dataIndex + '_video')
+                    });
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        }, 200);
+    }
+};
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    try {
+        trackThumbnailModule(window._satellite);
+    } catch (e) {
+        console.log("DOMContentLoaded: Listner failed", e);
+    }
+});*/
+});

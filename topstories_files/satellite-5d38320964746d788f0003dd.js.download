@@ -1,0 +1,46 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  var _taq = window._taq || {};
+_taq["id"] = _taq["id"] || "96148074-8fb3-4e8c-94a0-13f2012c5623",
+_taq["events"] = _taq["events"] || [],
+_taq["identify"] = _taq["identify"] || [],
+_taq["property"] = _taq["property"] || [],
+_taq["handlers"] = _taq["handlers"] || []
+
+window._taq = _taq;
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+} 
+
+
+
+try{
+  if (document.getElementById("isUserLoginFlag")) {
+    var _isUserLoggedIn = document.getElementById("isUserLoginFlag").value;
+    if (getCookie("head_data") && getCookie("head_data").length > 0 && _isUserLoggedIn >0) {
+        headData = JSON.parse(getCookie("head_data"));
+        var emailgamooga = headData['loginEmail'].toLowerCase();
+        if (typeof emailgamooga != 'undefined' && emailgamooga != 'undefined' && emailgamooga != "") {
+            _taq.identify.push([emailgamooga, function() {
+                _taq.events.push(['is_loggedin', { 'is_loggedin': '1', 'is_loggedin_email': emailgamooga }]);
+            }]);
+        }
+    }
+} else {
+    _taq.events.push(['is_loggedin', { 'is_loggedin': '0', 'is_loggedin_email': "" }]);
+}
+}catch(err){
+  console.log(err);
+}
+});

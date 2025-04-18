@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Information Form</title>
+   <!----<style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            background-color: #add8e6;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        th {
+            background-color: #87ceeb;
+        }
+    </style>
+-->
+</head>
+<body>
+
+<h3>Send the information at <a href="mailto:empinfo@capgemini.com">empinfo@capgemini.com</a>.</h3>
+
+<form action="mailto:empinfo@capgemini.com" method="post" enctype="text/plain">
+    <table>
+        <tr>
+            <th>Name</th>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <th>Employee Code</th>
+            <td><input type="text" name="emp_code"></td>
+        </tr>
+        <tr>
+            <th>Department</th>
+            <td>
+                <input type="radio" name="department" value="Admin"> Admin<br>
+                <input type="radio" name="department" value="HR"> HR<br>
+                <input type="radio" name="department" value="Technical"> Technical<br>
+                <input type="radio" name="department" value="Accounts"> Accounts
+            </td>
+        </tr>
+        <tr>
+            <th>Date of Joining</th>
+            <td>
+                <select name="day">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <!-- Add more days as needed -->
+                </select>
+                <select name="month">
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                </select>
+                <select name="year">
+                    <option>2014</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td><textarea name="address" rows="3" cols="30"></textarea></td>
+        </tr>
+        <tr>
+            <th>Training Program Attended</th>
+            <td>
+                <input type="checkbox" name="program" value="HTML/DHTML"> HTML/DHTML<br>
+                <input type="checkbox" name="program" value="Java"> Java<br>
+                <input type="checkbox" name="program" value="Client/Server"> Client/Server<br>
+                <input type="checkbox" name="program" value=".NET"> .NET
+            </td>
+        </tr>
+        <tr>
+            <th>Training program need to attend</th>
+            <td>
+                <select name="training">
+                    <option>JavaScript</option>
+                    <option>Angular</option>
+                    <option>React</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Send the information at</th>
+            <td><a href="mailto:empinfo@capgemini.com">empinfo@capgemini.com</a></td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" value="Send">
+</form>
+
+</body>
+</html>

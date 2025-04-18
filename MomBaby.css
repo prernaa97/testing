@@ -1,0 +1,266 @@
+*{
+    margin:0%;
+    padding:0%
+}
+.f-nav{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: rgb(233, 32, 132);
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.feature{
+    padding-top: 15px;
+    display: flex;
+}
+.feature .app{
+    display: flex;
+    margin-inline: 22px;
+    
+}
+.feature .app i{
+    margin-inline: 8px;
+}
+.sec-nav{
+
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid grey;
+    margin-top: 8px;
+    
+}
+.sec-nav ul li img{
+    width: 8%;
+}
+.sec-nav ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-inline: 22px;
+}
+.sec-nav ul li a:hover {
+    color: #e91e63;
+}
+
+.sec-nav .inputs{
+    display: flex;
+
+}
+.sec-nav .inputs button{
+    margin-inline: 14px;
+}
+.sec-nav .inputs input{
+    
+    width: 300px;
+    height: 35px;
+    background-color: rgb(235, 230, 230);
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-bottom: 8px;
+}
+.sec-nav .inputs button{
+    margin-left: 22px;
+    width: 90px;
+    height: 34px;
+    background-color: rgb(233, 32, 132);
+    color: rgb(235, 230, 230);
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+
+}
+.items{
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: -17px;
+}
+.items ul li a{
+    
+    margin-inline: 22px;
+    color: rgb(107, 105, 107);
+}
+.items ul li a:hover {
+    color: #e91e63;
+  }
+.items ul li button{
+    width: 100px;
+    height: 34px;
+    background-color: rgb(233, 32, 132);
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+}
+.items ul li {
+    list-style: none;
+}
+
+.fashwash h2{
+    text-align: center;
+    
+    padding: 20px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: rgb(164, 69, 201);
+    
+    padding:  7px;
+    
+}
+.fashwash img{
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.fashwash2{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.fashwash2 img{
+     width: 19%;
+     margin-bottom: 10px;
+    }
+ .fashwash2 img:hover{
+     transform: scale(1.05);
+     color: plum;
+    }
+
+    .fashwash3{
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    .fashwash3 img{
+         width: 1%;
+         margin-bottom: 10px;
+        }
+     .fashwash3 img:hover{
+         transform: scale(1.05);
+         color: plum;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.warning p{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: rgb(245, 190, 208);
+    margin-top: 10px;
+    margin-bottom: 12px;
+     background-color: rgb(243, 244, 245);
+     outline: rgb(243, 244, 245) solid 0px;
+outline-offset: 0px;
+}
+
+.blackfooter {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+     }
+
+ /*footer */
+.footer{
+    padding: 20px;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: grey;
+    color: white;
+    line-height: 1.8;
+} 
+ .footer .list{
+    flex-direction: column;
+    
+    
+}
+
+.footer .list ul li a{
+    font-weight: 20;
+}
+.footer  ul li h3{
+    font-size: 16px;
+}
+.footer  ul{
+    list-style: none;
+    padding: 5px;
+    font-size: 15px;
+
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ .last{
+    padding-top: 30px;
+    display: flex;
+    background-color: #e91e63;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.last ul li{
+    font-size: 11px;
+    word-spacing: 13px;
+ }
+ .last ul{
+    color: aliceblue;
+    list-style: none;
+ }
+ .last pre{
+    font-size: 10px;
+    color: aliceblue;
+ }
+ .footer ul li img{
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    
+ }
+
+.last ul li {
+    
+    font-size: 11px; 
+    color: whitesmoke; 
+}
+
+.last pre {
+    text-align: center; 
+    color: whitesmoke; 
+    font-size: 12px; 
+}

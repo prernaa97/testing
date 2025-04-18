@@ -1,0 +1,58 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  // The following implements deduplication logic for criteo. 
+// Owners: 
+// NYKAA MARKETING: 	Divya Maria <divya.maria@nykaa.com>, Atoshi Chakraborty <atoshi.chakraborty@nykaa.com>
+// CRITEO TECH: Suman Joshi <s.joshi@criteo.com>
+// IMPLEMENTED here by: Mayank
+
+
+var trackingKey = 'utm_medium'; //key of the tracking parameter
+var trackingValue = "criteo"; // value of the tracking parameter
+var cookie = "crtg_dd"; // cookie name where the dd value will be stored
+var days = 7; // cookie life time in days
+ 
+cr_readTracking(trackingKey, trackingValue); // call the function to create/update cookie with deduplication value
+cr_getCookie("crtg_dd"); // call the function to return deduplication value, see callTransactionCode for possible usage example
+ 
+// Scan the value of the URL parameters followed by ? sign. Create/update the cookie if parameter string contains trackingKey value only
+// Set cookie value to 1 if the value of trackingKey = trackingValue, set the value to 0 if trackingKey != trackingValue
+// This function uses cr_createCookie function
+function cr_readTracking(key, value)
+{
+   var query = window.location.search.substring(1);
+   var vars = query.split("&");
+   for (var i=0;i<vars.length;i++) {
+           var pair = vars[i].split("=");
+           console.log(query);
+           if (pair[0].toLowerCase() == key) {
+                if (pair[1].toLowerCase() == value) {
+                    cr_createCookie(cookie,1,days);
+                } else {
+                    cr_createCookie(cookie,0,days);
+                }
+         }
+   }
+};
+ 
+// Creating or updating cookie by recreating it
+function cr_createCookie(cookie, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cookie + "=" + value + "; " + expires + "; path=/";
+};
+ 
+// Read the value of the cookie and return the value. In case the cookie is not found, return default value "0"
+function cr_getCookie(c_name) {
+    var i, x, y, ARRCookies = document.cookie.split(";");
+    for (i = 0; i < ARRCookies.length; i++) {
+        x = ARRCookies[i].substr(0, ARRCookies[i].indexOf("="));
+        y = ARRCookies[i].substr(ARRCookies[i].indexOf("=") + 1);
+        x = x.replace(/^\s+|\s+$/g, "");
+        if (x == c_name) {
+            return unescape(y);
+        }
+    }
+    return "0";
+}
+});

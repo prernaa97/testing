@@ -1,0 +1,18 @@
+_satellite.pushBlockingScript(function(event, target, $variables){
+  try{
+  var UnbxdSiteName = UnbxdSiteName || "nykaa-u1430893625219";
+  var UnbxdApiKey = UnbxdApiKey || "431507a8b9841ea147484434ab12860d";
+
+  var UnbxdWidgetsConf = UnbxdWidgetsConf || {currency: "INR"}
+
+  /*if(typeof UnbxdWidgetsConf == 'undefined' || UnbxdWidgetsConf == null) {
+      var UnbxdWidgetsConf = {
+          currency: "INR"
+              };
+  }*/
+
+} catch(e){
+  console.error("Error: All Page Nykaa India Pixel : Sequential Javascript", e);
+}
+
+});
