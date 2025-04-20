@@ -102,35 +102,85 @@
     .items ul li {
         list-style: none;
     }
-    
 
-
-
-
-.fashwash img{ 
-    margin-top: 13px;
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.fashwash2{
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-}
-.fashwash2 img{
-     width: 18%;
-     margin-bottom: 10px;
+    .fashwash img{ 
+        margin-top: 13px;
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
     }
- .fashwash2 img:hover{
-     transform: scale(1.05);
-     color: plum;
+
+    .slider-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+      }
+      
+      .product-card {
+        display: inline-block;
+        background: #fff;
+        border-radius: 12px;
+        /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+        margin-right: 20px;
+        width: 180px;
+        text-align: center;
+        padding: 5px;
+      }
+      
+      .product-card img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      
+      /* .product-card h4 {
+        margin: 10px 0 7px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+      
+      .product-card p {
+        color: rgb(119, 118, 118);
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      } */
+      
+      .slider-container::-webkit-scrollbar {
+        height: 1px;
+      }
+      
+      .slider-container::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+      }
+      
+      .slider-container::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+
+      
+        .toto7{
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+        }
+        .toto7 img{
+        width: 20%;
+        margin-bottom: 30px;
     }
+   /* .toto img:hover{
+    transform: scale(1.05);
+       color:rgb(193, 97, 193) ;
+    } */
+
+
+
 
     .newnyka img{
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: -4px;
     }
     .newnyka img:hover{
         columns: plum;
@@ -143,6 +193,7 @@
         text-align: center;
     }
     .toto img{
+        margin-top: 40px;
         width: 17%;
         margin-bottom: 20px;
     }
@@ -157,8 +208,10 @@
         justify-content: space-around;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
+        margin-bottom: 40px;
     }
     .toto2 img{
+        margin-top: 40px;
         width: 17%;
         margin-bottom: 20px;
     }
@@ -168,7 +221,7 @@
     } */
 
     .grp img{
-      width: 80%;
+      width: 90%;
         border-radius: 8px;
         /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
         margin-bottom: 5px;
@@ -185,252 +238,140 @@
         font-weight: bold;
 
     }
+  
 
 
-    /* body {
-        margin: 0;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
-      } */
-      
-      h2 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      
-      .slider-container {
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 10px;
-        margin-bottom: 30px;
-      }
-      
-      .product-card {
-        display: inline-block;
-        background: #fff;
-        border-radius: 12px;
-        /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
-        margin-right: 20px;
-        width: 250px;
-        text-align: center;
-        padding: 20px;
-      }
-      
-      .product-card img {
-        width: 100%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    .warning p{
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        padding-top: 30px;
+        padding-bottom: 30px;
         border-radius: 8px;
-      }
-      
-      .product-card h4 {
-        margin: 10px 0 7px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-      }
-      
-      .product-card p {
-        color: rgb(119, 118, 118);
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-      }
-      
-      .slider-container::-webkit-scrollbar {
-        height: 1px;
-      }
-      
-      .slider-container::-webkit-scrollbar-thumb {
-        background: #ccc;
-        border-radius: 4px;
-      }
-      
-      .slider-container::-webkit-scrollbar-track {
-        background: transparent;
-      }
-
-
-      .footer-top {
-        background-color: #1c1c1c;
-        color: white;
-        padding: 30px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        font-family: Arial, sans-serif;
-      }
-      
-      .footer-left, .footer-center, .footer-right {
-        flex: 1;
-        margin: 10px;
-        min-width: 250px;
-      }
-      .email-box {
-        display: flex;
+        border-style: solid;
+        border-color: rgb(245, 190, 208);
         margin-top: 10px;
-        max-width: 300px; /* total width for email + button */
-      }
-      
-      .email-box input {
-        width: 70%; /* 70% of 300px */
-        padding: 8px;
-        border: none;
-        border-radius: 3px 0 0 3px;
-        outline: none;
-        font-size: 14px;
-      }
-      
-      .email-box button {
-        width: 30%; /* 30% of 300px */
-        padding: 8px;
-        border: none;
-        background-color: white;
-        color: black;
-        border-radius: 0 3px 3px 0;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: bold;
-      }
-      
-      
-      .app-links img {
-        height: 40px;
-        margin-right: 10px;
-        margin-top: 10px;
-      }
-      
-      .icon {
-        height: 16px;
-        vertical-align: middle;
-        margin-right: 5px;
-      }
-      
-      .phone {
-        font-size: 18px;
-        font-weight: bold;
-        margin: 5px 0;
-      }
-      
+        margin-bottom: 12px;
+         background-color: rgb(243, 244, 245);
+         outline: rgb(243, 244, 245) solid 0px;
+    outline-offset: 0px;
+    }
     
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.warning p{
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-radius: 8px;
-    border-style: solid;
-    border-color: rgb(245, 190, 208);
-    margin-top: 10px;
-    margin-bottom: 12px;
-     background-color: rgb(243, 244, 245);
-     outline: rgb(243, 244, 245) solid 0px;
-outline-offset: 0px;
-}
-
-.blackfooter {
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-     }
-
- /*footer */
+    .blackfooter {
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+         }
+
+         .footer-top {
+            background-color: #1c1c1c;
+            color: white;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-family: Arial, sans-serif;
+          }
+          
+          .footer-left, .footer-center, .footer-right {
+            flex: 1;
+            margin: 10px;
+            min-width: 250px;
+          }
+          .email-box {
+            display: flex;
+            margin-top: 10px;
+            max-width: 300px; /* total width for email + button */
+          }
+          
+          .email-box input {
+            width: 70%; /* 70% of 300px */
+            padding: 8px;
+            border: none;
+            border-radius: 3px 0 0 3px;
+            outline: none;
+            font-size: 14px;
+          }
+          
+          .email-box button {
+            width: 30%; /* 30% of 300px */
+            padding: 8px;
+            border: none;
+            background-color: white;
+            color: black;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+          }
+          
+          
+          .app-links img {
+            height: 40px;
+            margin-right: 10px;
+            margin-top: 10px;
+          }
+          
+          .icon {
+            height: 16px;
+            vertical-align: middle;
+            margin-right: 5px;
+          }
+          
+          .phone {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px 0;
+          }
+
+
+          /*footer */
 .footer{
     padding: 20px;
     /* padding-top: 20px;
