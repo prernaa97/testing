@@ -182,6 +182,11 @@
         width: 100%;
         margin-bottom: -4px;
     }
+
+    .newnykaa img{
+      width: 100%;
+      margin-bottom: -4px;
+  }
     .newnyka img:hover{
         columns: plum;
     }
