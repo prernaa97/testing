@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nykaa Log In</title>
+  <link rel="stylesheet" href="NykaLogin.css">
+</head>
+<body>
+  <div class="container">
+    <form class="login-form">
+      <h2>Login to Nykaa</h2>
+      
+      <label for="email">Email or Phone Number</label>
+      <input type="text" id="email" name="email" placeholder="Enter email or phone" 
+             pattern="^(\d{10}|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$" required>
+      <small>Use valid 10-digit phone or email</small>
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" 
+             pattern=".{6,}" required>
+      <small>Minimum 6 characters</small>
+
+      <button type="submit">Login In</button>
+
+      <div class="otp-login">
+        <p>or</p>
+        <a href="#">Login with OTP</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
