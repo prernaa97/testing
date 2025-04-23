@@ -1,3 +1,0 @@
-_satellite.pushBlockingScript(function(event, target, $variables){
-  !function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="//confighk.veinteractive.com/tags/5E05D0B8/FA5C/436B/B586/08F5F75A5521/tag.js";var b=document.getElementsByTagName("head")[0];if(b)b.appendChild(a,b);else{var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}}();
-});
